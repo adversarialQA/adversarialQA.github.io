@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>Beat the AI: Investigating Adversarial Human Annotation for Reading Comprehension</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom fonts for this template -->
+    <link href="css/font.css" rel="stylesheet" type="text/css">
+    <link href="https://fonts.googleapis.com/css?family=Lato:300,400,700,300italic,400italic,700italic" rel="stylesheet"
+          type="text/css">
+    <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+
+    <!-- Custom styles for this template -->
+    <link href="css/landing-page.css" rel="stylesheet">
+
+</head>
+
+<body>
+
+<!-- Navigation -->
+<nav class="navbar navbar-expand-md navbar-light bg-light">
+    <div class="" id="navbarResponsive">
+        <ul class="navbar-nav mc-auto">
+            <li class="nav-item">
+                <a class="nav-link" href="index.html">AdversarialQA Home</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="data.html">Data</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="leaderboard.html">Leaderboard</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="http://nlp.cs.ucl.ac.uk" target="_blank">UCL NLP&nbsp; <img
+                        src="img/uclnlp-logo.png" style="width: 24px; height: 24px" alt="" /></a>
+            </li>
+        </ul>
+    </div>
+</nav>
+
+<!-- Header -->
+<header class="header">
+    <div class="container">
+        <div class="intro-message">
+            <h1>AdversarialQA</h1>
+            <h3>Datasets produced in <a class="text-white" href="https://arxiv.org/abs/2002.00293" target="_blank">Beat the AI: Investigating Adversarial Human Annotation for Reading Comprehension</a></h3>
+            <hr class="intro-divider">
+            <ul class="list-inline intro-social-buttons">
+                <li class="list-inline-item">
+                    <a href="https://arxiv.org/abs/2002.00293" class="btn btn-info btn-lg" target="_blank">
+                        <i class="fa fa-file-text-o fa-fw"></i> <span class="paper-name">TACL Paper</span>
+                    </a>
+                </li>
+                <li class="list-inline-item">
+                    <a href="data/aqa_v1.0.zip" class="btn btn-info btn-lg">
+                    <i class="fa fa-download fa-fw"></i> <span class="dataset-name">Dataset Download</span>
+                    </a>
+                </li>
+            </ul>
+            <h6>Dataset Distribution under <a href="https://creativecommons.org/licenses/by-sa/3.0/">CC BY-SA 3.0 </a></h6>
+        </div>
+    </div>
+</header>
+
+<section class="content-section content-section-b py-5">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12 ml-auto text-center">
+                <p class="lead mb-0">
+                    <em>Authors:</em> <a href="https://www.maxbartolo.com" target="_blank">Max Bartolo</a>, <a href="https://twitter.com/ARoberts9" target="_blank">Alastair Roberts</a>, <a href="https://twitter.com/Johannes_Welbl" target="_blank">Johannes Welbl</a>, <a href="http://www.riedelcastro.org/" target="_blank">Sebastian Riedel</a>, <a href="https://pontus.stenetorp.se/" target="_blank">Pontus Stenetorp</a>
+                </p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Page Content -->
+<section class="content-section content-section-a">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 ml-auto">
+                <h2 class="section-heading">Three New RC Datasets</h2>
+                <p class="lead">
+                    We have created three new Reading Comprehension datasets constructed using an adversarial model-in-the-loop.
+                </p>
+                <p class="lead">
+                    We use three different models; BiDAF (<a href="https://arxiv.org/abs/1611.01603" target="_blank">Seo et al., 2016</a>),
+                    BERT<sub>Large</sub> (<a href="https://arxiv.org/abs/1810.04805" target="_blank">Devlin et al., 2018</a>),
+                    and RoBERTa<sub>Large</sub> (<a href="https://arxiv.org/abs/1907.11692" target="_blank">Liu et al., 2019</a>) in the annotation loop and
+                    construct three datasets; <span class="aqa_dataset">D(BiDAF)</span>, <span class="aqa_dataset">D(BERT)</span>, and <span class="aqa_dataset">D(RoBERTa)</span>, each with 10,000 training examples, 1,000 validation, and 1,000 test examples.
+                </p>
+                <p class="lead">
+                    The adversarial human annotation paradigm ensures that these datasets consist of questions that current state-of-the-art models (at least the ones used as adversaries in the annotation loop) find challenging.
+                </p>
+                <p class="lead">
+                    The three AdversarialQA round 1 datasets provide a training and evaluation resource for such methods.
+                </p>
+            </div>
+            <div class="col-lg-4 mr-auto">
+                <img class="img-fluid" src="img/data-examples.png" alt="">
+            </div>
+        </div>
+    </div>
+    <!-- /.container -->
+</section>
+
+
+<section class="content-section content-section-b">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-7 ml-auto">
+                <h2 class="section-heading">Adversarial Human Annotation</h2>
+                <p class="lead">
+                    The annotation process pairs a human and a reading comprehension model in an interactive setting.
+                    The human is presented with a passage for which they write a question and highlight the correct answer.
+                    The model then tries to answer the question, and, if it fails to answer correctly, the human wins.
+                    Otherwise, the human modifies or re-writes their question until the successfully fool the model.
+
+                </p>
+                <p class="lead">
+                    More explanation on the task and the dataset can be found in the <a
+                        href="https://arxiv.org/abs/2002.00293" target="_blank">paper</a>.
+                </p>
+            </div>
+            <div class="col-lg-5 mr-auto ">
+                <img class="img-fluid" src="img/data-annotation.png" alt="">
+            </div>
+        </div>
+
+        <div class="row pt-5">
+            <div class="col-lg-12 mr-auto">
+                <img class="img-fluid" src="img/demo.gif" alt="">
+            </div>
+        </div>
+    </div>
+    <!-- /.container -->
+
+</section>
+
+
+<!-- Footer -->
+<footer>
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-6 ml-auto">
+                <div class="clearfix"></div>
+                <h2 class="section-heading">Contact </h2>
+                <p class="lead"><i class="fa fa-envelope"></i>&nbsp; <u>m.bartolo [at] cs.ucl.ac.uk</u></p>
+                <p class="lead"><i class="fa fa-twitter"></i>&nbsp; <a href="https://twitter.com/max_nlp" target="_blank">@max_nlp</a></p>
+            </div>
+            <div class="col-lg-6 mr-auto text-right">
+                <p class="copyright text-muted small">&copy; Copyright 2020, Max Bartolo.</p>
+            </div>
+        </div>
+    </div>
+</footer>
+
+
+<!-- Bootstrap core JavaScript -->
+<script src="vendor/jquery/jquery.min.js"></script>
+<script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+</body>
+
+</html>

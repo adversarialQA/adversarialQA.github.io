@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>Beat the AI: Investigating Adversarial Human Annotation for Reading Comprehension</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom fonts for this template -->
+    <link href="css/font.css" rel="stylesheet" type="text/css">
+    <link href="https://fonts.googleapis.com/css?family=Lato:300,400,700,300italic,400italic,700italic" rel="stylesheet"
+          type="text/css">
+    <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+
+    <!-- Custom styles for this template -->
+    <link href="css/landing-page.css" rel="stylesheet">
+
+</head>
+
+<body>
+
+<!-- Navigation -->
+<nav class="navbar navbar-expand-md navbar-light bg-light">
+    <div class="" id="navbarResponsive">
+        <ul class="navbar-nav mc-auto">
+            <li class="nav-item">
+                <a class="nav-link" href="index.html">AdversarialQA Home</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="data.html">Data</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="leaderboard.html">Leaderboard</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="http://nlp.cs.ucl.ac.uk" target="_blank">UCL NLP&nbsp; <img
+                        src="img/uclnlp-logo.png" style="width: 24px; height: 24px" alt="" /></a>
+            </li>
+        </ul>
+    </div>
+</nav>
+
+<!-- Header -->
+<header class="header">
+    <div class="container">
+        <div class="intro-message">
+            <h1>AdversarialQA</h1>
+            <h3>Datasets produced in <a class="text-white" href="https://arxiv.org/abs/2002.00293" target="_blank">Beat the AI: Investigating Adversarial Human Annotation for Reading Comprehension</a></h3>
+            <hr class="intro-divider">
+            <ul class="list-inline intro-social-buttons">
+                <li class="list-inline-item">
+                    <a href="https://arxiv.org/abs/2002.00293" class="btn btn-info btn-lg" target="_blank">
+                        <i class="fa fa-file-text-o fa-fw"></i> <span class="paper-name">TACL Paper</span>
+                    </a>
+                </li>
+                <li class="list-inline-item">
+                    <a href="data/aqa_v1.0.zip" class="btn btn-info btn-lg">
+                    <i class="fa fa-download fa-fw"></i> <span class="dataset-name">Dataset Download</span>
+                    </a>
+                </li>
+            </ul>
+            <h6>Dataset Distribution under <a href="https://creativecommons.org/licenses/by-sa/3.0/">CC BY-SA 3.0 </a></h6>
+        </div>
+    </div>
+</header>
+
+<!-- Page Content -->
+<section class="content-section content-section-a">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12 ml-auto">
+                <hr class="section-heading-spacer">
+                <div class="clearfix"></div>
+                <h2 class="section-heading">Datasets</h2>
+                <p class="lead">
+                    The AdversarialQA Round 1 data consists of three RC datasets constructed using different models in the annotation loop;
+                    <span class="aqa_dataset">D(BiDAF)</span>, <span class="aqa_dataset">D(BERT)</span>, and <span class="aqa_dataset">D(RoBERTa)</span>.
+                    Each dataset consists of 10,000 training, 1,000 validation, and 1,000 test examples.
+                    The data is provided in the same format as <a href="https://rajpurkar.github.io/SQuAD-explorer/" target="_blank">SQuAD 1.1</a>
+                    for convenient processing and evaluation.
+                </p>
+                <p class="lead">
+                    In order to understand the data better, we provide some <a href="#examples">examples from the validation sets</a> of each of these datasets.
+                </p>
+            </div>
+        </div>
+    </div>
+    <!-- /.container -->
+</section>
+
+
+<section class="content-section content-section-b">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12 ml-auto">
+                <h2 class="section-heading mb-2" name="examples" id="examples">Examples from the Datasets</h2>
+
+                <hr class="section-heading-spacer">
+                <div class="clearfix"></div>
+                <h3 class="py-2">D(BiDAF)</h3>
+
+                <div class="row data-example mb-2">
+                    <div class="col-sm-8">
+                        <p class="passage">
+                            In 2014, economists with the <span class="ans ans-3">Standard & Poor</span>'s rating agency concluded that the widening disparity between the U.S.'s wealthiest citizens and the rest of the nation had slowed its recovery from the 2008-2009 recession and made it more prone to boom-and-bust cycles. To partially remedy the wealth gap and the resulting slow growth, S&P recommended <span class="ans ans-2">increasing access to education</span>. It estimated that if the average United States worker had completed just <span class="ans ans-1">one more year of school</span>, it would add an additional $105 billion in growth to the country's economy over five years.
+                        </p>
+                    </div>
+                    <div class="col-sm-4">
+                        <p class="question" data-q-num="1">How much more education would workers need to add billions to growth?</p>
+                        <p class="question" data-q-num="2">What was S&P's idea on how to deal with disparity?</p>
+                        <p class="question" data-q-num="3">What does S&P stand for?</p>
+
+                    </div>
+                </div>
+                <!-- /.data-example -->
+
+                <div class="row data-example mb-2">
+                    <div class="col-sm-8">
+                        <p class="passage">
+                            Martin Luther married Katharina <span class="ans ans-1">von Bora</span>, one of 12 nuns he had helped escape from the Nimbschen Cistercian convent in April 1523, when he arranged for them to be smuggled out in herring barrels. "Suddenly, and while I was occupied with <span class="ans ans-3">far different thoughts</span>," he wrote to Wenceslaus Link, "<span class="ans ans-2">the Lord</span> has plunged me into marriage." At the time of their marriage, Katharina was 26 years old and Luther was 41 years old.
+                        </p>
+                    </div>
+                    <div class="col-sm-4">
+                        <p class="question" data-q-num="1">What was Katharina's last name?</p>
+                        <p class="question" data-q-num="2">In a letter who did Luther credit for his union with Katharina?</p>
+                        <p class="question" data-q-num="3">What did Luther say he was engrossed in?</p>
+
+                    </div>
+                </div>
+                <!-- /.data-example -->
+
+                <div class="row data-example mb-2">
+                    <div class="col-sm-8">
+                        <p class="passage">
+                            <!-- <span class="ans ans-1"> -->
+                            In economics, notable Nobel Memorial Prize in Economic Sciences winners Milton Friedman, a major advisor to Republican U.S. President Ronald Reagan and Conservative British Prime Minister <span class="ans ans-2">Margaret Thatcher</span>, <span class="ans ans-3">George Stigler</span>, Nobel laureate and proponent of regulatory capture theory, Gary Becker, an important contributor to the family economics branch of economics, <span class="ans ans-4">Herbert A. Simon</span>, responsible for the modern interpretation of the concept of organizational decision-making, Paul Samuelson, the first <span class="ans ans-1">American to win the Nobel Memorial Prize in Economic Sciences</span>, and Eugene Fama, known for his work on portfolio theory, asset pricing and stock market behaviour, are all graduates. American economist, social theorist, political philosopher, and author Thomas Sowell is also an alumnus.
+                        </p>
+                    </div>
+                    <div class="col-sm-4">
+                        <p class="question" data-q-num="1">Paul Samuelson was the first of these?</p>
+                        <p class="question" data-q-num="2">Milton Friedman was a major advisor to what Prime Minister?</p>
+                        <p class="question" data-q-num="3">What alumni was a proponent of regulatory capture theory?</p>
+                        <p class="question" data-q-num="4">The concept of organization decision-making came from whom?</p>
+
+                    </div>
+                </div>
+                <!-- /.data-example -->
+
+                <hr class="section-heading-spacer">
+                <div class="clearfix"></div>
+                <h3 class="py-2">D(BERT)</h3>
+
+                <div class="row data-example mb-2">
+                    <div class="col-sm-8">
+                        <p class="passage">
+                            BSkyB's <span class="ans ans-3">digital</span> service was officially launched on 1 October 1998 under the name Sky Digital, although small-scale tests were carried out before then. At this time the use of <span class="ans ans-1">the Sky Digital brand</span> made an important distinction between the new service and Sky's analogue services. Key selling points were <span class="ans ans-2">the improvement in picture and sound quality, increased number of channels and an interactive service branded Open</span>.... now called Sky Active, BSkyB competed with the ONdigital (later ITV Digital) terrestrial offering and cable services. Within 30 days, over 100,000 digiboxes had been sold, which help bolstered BSkyB's decision to give away free digiboxes and minidishes from May 1999.
+                        </p>
+                    </div>
+                    <div class="col-sm-4">
+                        <p class="question" data-q-num="1">What happened first, the giveaway of digiboxes, or the launch of the Sky Digital brand?</p>
+                        <p class="question" data-q-num="2">What did digital offer over analogue?</p>
+                        <p class="question" data-q-num="3">Which had more channels, Sky's digital service, or analogue?</p>
+
+                    </div>
+                </div>
+                <!-- /.data-example -->
+
+                <div class="row data-example mb-2">
+                    <div class="col-sm-8">
+                        <p class="passage">
+                            This combination of cancellations and σ and π overlaps results in dioxygen's double bond character and reactivity, and a triplet electronic ground state. <span class="ans ans-4">An electron configuration with two unpaired electrons</span> as found in dioxygen (see the filled π* orbitals in the diagram), orbitals that are of <span class="ans ans-3">equal energy</span>—i.e., degenerate—is a configuration termed a spin triplet state. Hence, the ground state of the <span class="ans ans-1">O2</span> molecule is referred to as triplet oxygen.[b] The <span class="ans ans-2">highest energy</span>, partially filled orbitals are antibonding, and so their filling weakens the bond order from three to two. Because of its unpaired <span class="ans ans-5">electrons</span>, triplet oxygen reacts only slowly with most organic molecules, which have paired electron spins; this prevents spontaneous combustion.
+                        </p>
+                    </div>
+                    <div class="col-sm-4">
+                        <p class="question" data-q-num="1">What is the chemical name for oxygen?</p>
+                        <p class="question" data-q-num="2">Which orbitals are only partially filled in O2?</p>
+                        <p class="question" data-q-num="3">What does it mean if two orbitals are degenerate?</p>
+                        <p class="question" data-q-num="4">What is a spin triplet state?</p>
+                        <p class="question" data-q-num="5">What are in the orbitals of atoms?</p>
+                    </div>
+                </div>
+                <!-- /.data-example -->
+
+                <div class="row data-example mb-2">
+                    <div class="col-sm-8">
+                        <p class="passage">
+                            <!-- <span class="ans ans-1"> -->
+                            A constitutional change was considered that would <span class="ans ans-1">eliminate the position of Prime Minister</span> and simultaneously reduce the powers of the President. A referendum to vote on the proposed constitution was held on 4 August 2010, and the new constitution passed by a wide margin. Among other things, the new constitution delegates more power to local governments and gives Kenyans a <span class="ans ans-3">bill of rights</span>. It was promulgated on 27 August 2010 at a euphoric ceremony in Nairobi's Uhuru Park, accompanied by a 21-gun salute. The event was attended by various African leaders and praised by the international community. As of that day, the new constitution heralding the Second Republic came into force.
+                        </p>
+                    </div>
+                    <div class="col-sm-4">
+                        <p class="question" data-q-num="1">What was the main focus, in relation to the head of cabinet of Kenya of a radical divergence from the previous set of guidelines for a country that was bounced off the legislators in Kenya?</p>
+<!--                        <p class="question" data-q-num="2">How can we know that the proposal to make a radical divergence from the previous set of guidelines was a popular one?</p>-->
+<!--                        <span class="ans ans-2">the new constitution passed by a wide margin</span>-->
+                        <p class="question" data-q-num="3">What in the radical divergence from the previous set of guidelines that was instituted in the summer of 2010 seeks to redress injustices?</p>
+                    </div>
+                </div>
+                <!-- /.data-example -->
+
+                <hr class="section-heading-spacer">
+                <div class="clearfix"></div>
+                <h3 class="py-2">D(RoBERTa)</h3>
+
+                <div class="row data-example mb-2">
+                    <div class="col-sm-8">
+                        <p class="passage">
+                            Between 1991 and 2000, the total area of forest lost in the Amazon rose from 415,000 to 587,000 square kilometres (160,000 to 227,000 sq mi), with most of the lost forest becoming pasture for cattle. Seventy percent of formerly forested land in the Amazon, and 91% of land deforested since 1970, is used for livestock pasture. Currently, <span class="ans ans-2">Brazil</span> is the second-largest global producer of <span class="ans ans-1">soybeans</span> after the United States. New research however, conducted by Leydimere Oliveira et al., has shown that the more rainforest is logged in the Amazon, the less precipitation reaches the area and so the lower the yield per hectare becomes. So despite the popular perception, there has been no economical advantage for Brazil from <span class="ans ans-3">logging</span> rainforest zones and converting these to pastoral fields.
+                        </p>
+                    </div>
+                    <div class="col-sm-4">
+                        <p class="question" data-q-num="1">What consumer product are the rain forests cleared for?</p>
+                        <p class="question" data-q-num="2">Of the two countries that produce soybeans, which country is clearing rain forest in order to increase production?</p>
+                        <p class="question" data-q-num="3">How is the rain forest cleared?</p>
+
+                    </div>
+                </div>
+                <!-- /.data-example -->
+
+                <div class="row data-example mb-2">
+                    <div class="col-sm-8">
+                        <p class="passage">
+                            <span class="ans ans-1">Tamara de Lempicka</span> was a famous artist born in Warsaw. She was born Maria Górska in Warsaw to wealthy parents and in 1916 married a Polish lawyer Tadeusz <span class="ans ans-2">Łempicki</span>. Better than anyone else she represented the Art Deco style in painting and ar. Nathan Alterman, the Israeli poet, was born in <span class="ans ans-4">Warsaw</span>, as was Moshe Vilenski, the Israeli composer, lyricist, and pianist, who studied music at the Warsaw Conservatory. Warsaw was the beloved city of Isaac Bashevis Singer, which he described in many of his novels: Warsaw has just now been destroyed. No one will ever see the Warsaw I knew. Let me just write about it. Let this Warsaw not disappear forever, he commented.
+                        </p>
+                    </div>
+                    <div class="col-sm-4">
+                        <p class="question" data-q-num="1">What is the pseudonym of the artist both to wealthy parents in Warsaw?</p>
+                        <p class="question" data-q-num="2">Into what family did the artist who represented the Art Deco style marry?</p>
+<!--                        <p class="question" data-q-num="3">Through what creations did Lempicka express a kind of art popular after World War One?</p>-->
+<!--                        <span class="ans ans-3">painting and art</span>-->
+                        <p class="question" data-q-num="4">What was the birthplace of the composer who attended the Warsaw Conservatory?</p>
+
+                    </div>
+                </div>
+                <!-- /.data-example -->
+
+                <div class="row data-example mb-2">
+                    <div class="col-sm-8">
+                        <p class="passage">
+                            <!-- <span class="ans ans-1"> -->
+                            Among the most important classes of <span class="ans ans-1">organic compounds</span> that contain oxygen are (where "<span class="ans ans-2">R</span>" is an organic group): alcohols (R-OH); ethers (R-O-R); ketones (R-CO-R); aldehydes (R-CO-H); carboxylic acids (R-COOH); esters (R-COO-R); acid anhydrides (R-CO-O-CO-R); and <span class="ans ans-3 ans-4">amides</span> (R-C(O)-NR2). There are many important organic solvents that contain oxygen, including: acetone, methanol, ethanol, isopropanol, furan, THF, diethyl ether, dioxane, ethyl acetate, DMF, DMSO, acetic acid, and formic acid. Acetone ((CH3)2CO) and phenol (C6H5OH) are used as feeder materials in the synthesis of many different substances. Other important organic compounds that contain oxygen are: glycerol, formaldehyde, glutaraldehyde, citric acid, acetic anhydride, and acetamide. Epoxides are ethers in which the oxygen atom is part of a ring of three atoms.
+                        </p>
+                    </div>
+                    <div class="col-sm-4">
+                        <p class="question" data-q-num="1">In addition to having oxygen, what do alcohols, ethers and esters have in common, according to the article?</p>
+                        <p class="question" data-q-num="2">What letter does the abbreviation for acid anhydrides both begin and end in?</p>
+                        <p class="question" data-q-num="3">Which of the organic compounds, in the article, contains nitrogen?</p>
+                        <p class="question" data-q-num="4">Which of the important classes of organic compounds, in the article, has a number in its abbreviation?</p>
+
+                    </div>
+                </div>
+                <!-- /.data-example -->
+
+            </div>
+        </div>
+    </div>
+    <!-- /.container -->
+
+</section>
+
+
+<!-- Footer -->
+<footer>
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-6 ml-auto">
+                <div class="clearfix"></div>
+                <h2 class="section-heading">Contact </h2>
+                <p class="lead"><i class="fa fa-envelope"></i>&nbsp; <u>m.bartolo [at] cs.ucl.ac.uk</u></p>
+                <p class="lead"><i class="fa fa-twitter"></i>&nbsp; <a href="https://twitter.com/max_nlp" target="_blank">@max_nlp</a></p>
+            </div>
+            <div class="col-lg-6 mr-auto text-right">
+                <p class="copyright text-muted small">&copy; Copyright 2020, Max Bartolo.</p>
+            </div>
+        </div>
+    </div>
+</footer>
+
+
+<!-- Bootstrap core JavaScript -->
+<script src="vendor/jquery/jquery.min.js"></script>
+<script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+<!-- Highlight answers -->
+<script>
+$(document).ready(function () {
+    $('.question').hover(function () {
+        let qnum = $(this).data('q-num');
+        $(this).parents('.data-example').find('.ans-'+qnum).addClass('ans-active');
+    }, function () {
+        let qnum = $(this).data('q-num');
+        $(this).parents('.data-example').find('.ans-'+qnum).removeClass('ans-active');
+    });
+});
+</script>
+
+</body>
+
+</html>

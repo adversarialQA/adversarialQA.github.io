@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>Beat the AI: Investigating Adversarial Human Annotation for Reading Comprehension</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom fonts for this template -->
+    <link href="css/font.css" rel="stylesheet" type="text/css">
+    <link href="https://fonts.googleapis.com/css?family=Lato:300,400,700,300italic,400italic,700italic" rel="stylesheet"
+          type="text/css">
+    <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+
+    <!-- Custom styles for this template -->
+    <link href="css/landing-page.css" rel="stylesheet">
+
+</head>
+
+<body>
+
+<!-- Navigation -->
+<nav class="navbar navbar-expand-md navbar-light bg-light">
+    <div class="" id="navbarResponsive">
+        <ul class="navbar-nav mc-auto">
+            <li class="nav-item">
+                <a class="nav-link" href="index.html">AdversarialQA Home</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="data.html">Data</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="leaderboard.html">Leaderboard</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="http://nlp.cs.ucl.ac.uk" target="_blank">UCL NLP&nbsp; <img
+                        src="img/uclnlp-logo.png" style="width: 24px; height: 24px" alt="" /></a>
+            </li>
+        </ul>
+    </div>
+</nav>
+
+<!-- Header -->
+<header class="header">
+    <div class="container">
+        <div class="intro-message">
+            <h1>AdversarialQA</h1>
+            <h3>Datasets produced in <a class="text-white" href="https://arxiv.org/abs/2002.00293" target="_blank">Beat the AI: Investigating Adversarial Human Annotation for Reading Comprehension</a></h3>
+            <hr class="intro-divider">
+            <ul class="list-inline intro-social-buttons">
+                <li class="list-inline-item">
+                    <a href="https://arxiv.org/abs/2002.00293" class="btn btn-info btn-lg" target="_blank">
+                        <i class="fa fa-file-text-o fa-fw"></i> <span class="paper-name">TACL Paper</span>
+                    </a>
+                </li>
+                <li class="list-inline-item">
+                    <a href="data/aqa_v1.0.zip" class="btn btn-info btn-lg">
+                    <i class="fa fa-download fa-fw"></i> <span class="dataset-name">Dataset Download</span>
+                    </a>
+                </li>
+            </ul>
+            <h6>Dataset Distribution under <a href="https://creativecommons.org/licenses/by-sa/3.0/">CC BY-SA 3.0 </a></h6>
+        </div>
+    </div>
+</header>
+
+<!-- Page Content -->
+<section class="content-section content-section-b">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12 ml-auto">
+                <hr class="section-heading-spacer">
+                <div class="clearfix"></div>
+                <h2 class="section-heading">Leaderboard</h2>
+                <p class="lead">
+                    The AdversarialQA Round 1 data is the first round of the <a href="https://dynabench.org/tasks/2#1" target="_blank">Dynabench QA task</a>.
+                    Dynabench is a research platform for dynamic data collection and benchmarking.
+                    Please submit your model predictions directly to the live <a href="https://dynabench.org/tasks/2#1" target="_blank">Dynabench leaderboard</a>.
+                </p>
+                <p class="lead">
+                    For convenient analysis and evaluation, we provide the test sets with answers removed.
+                    Upload predicted answers as a <em>.json</em> file in the format <code>{"id_1": "answer_1", "id_2": "answer_2", ...}</code> (i.e. standard SQuAD prediction format)
+                    by combining your model predictions for each test set, or predicting directly on the provided <span class="aqa_dataset">D(Combined)</span> test set.
+                </p>
+            </div>
+        </div>
+    </div>
+    <!-- /.container -->
+</section>
+
+
+<!-- Footer -->
+<footer>
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-6 ml-auto">
+                <div class="clearfix"></div>
+                <h2 class="section-heading">Contact </h2>
+                <p class="lead"><i class="fa fa-envelope"></i>&nbsp; <u>m.bartolo [at] cs.ucl.ac.uk</u></p>
+                <p class="lead"><i class="fa fa-twitter"></i>&nbsp; <a href="https://twitter.com/max_nlp" target="_blank">@max_nlp</a></p>
+            </div>
+            <div class="col-lg-6 mr-auto text-right">
+                <p class="copyright text-muted small">&copy; Copyright 2020, Max Bartolo.</p>
+            </div>
+        </div>
+    </div>
+</footer>
+
+
+<!-- Bootstrap core JavaScript -->
+<script src="vendor/jquery/jquery.min.js"></script>
+<script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+</body>
+
+</html>
