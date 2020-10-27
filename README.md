@@ -4,11 +4,16 @@
 [**Beat the AI: Investigating Adversarial Human Annotation for Reading Comprehension**](https://arxiv.org/abs/2002.00293)
 
 ## Dataset
-Version 1.0 is available here: https://dl.fbaipublicfiles.com/adversarialQA/aqa_v1.0.zip.
+Version 1.0 is available here: https://dl.fbaipublicfiles.com/dynabench/qa/aqa_v1.0.zip.
+
+For further details see [adversarialQA.github.io](https://adversarialQA.github.io)
+
+![Demo Image](https://github.com/adversarialQA/adversarialQA.github.io/raw/main/img/demo.gif)
+
 
 ## Leaderboard
 
-If you want to have your model added to the leaderboard, please reach out to us.
+If you want to have your model added to the leaderboard, please submit your model predictions to the live leaderboard on [**Dynabench**](https://dynabench.org/tasks/2#1).
 
 Model | Reference | Overall (F1)
 ---|---|---
